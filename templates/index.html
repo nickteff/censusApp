@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Source+Code+Pro:500">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript"
+            charset="utf8"
+            src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>{% block title %}Talk Python Mega Demo{% endblock %}</title>
+    <script>
+      $(document).ready(function() {
+        $('#table_id').DataTable();
+      });
+    </script>
+
+</head>
+<body>
+
+
+
+<h1>Hello, World!</h1><table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Profile</th>
+            <th>Last Interaciton</th>
+            <th>Add Interaction</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in profiles %}
+        <tr>
+            <td>
+                {{ i }}
+            </td>
+            <td>
+                <a href="#">Profile</a>
+            </td>
+            <td>
+                <a href="#">View Last Interaction</a>
+            </td>
+            <td>
+                <a href="#">Add Interaction</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
