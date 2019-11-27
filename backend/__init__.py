@@ -9,4 +9,4 @@ api = Flask(__name__)
 #db = SQLAlchemy(app)
 #migrate = Migrate(app, db)
 
-from backend import routes
+from backend import routes, models
