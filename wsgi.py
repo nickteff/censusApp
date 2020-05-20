@@ -11,6 +11,6 @@ if __name__ == '__main__':
     app2.app.enable_dev_tools(debug=False)
     index.app.enable_dev_tools(debug=False)
     if debug:
-        server.run(host='0.0.0.0', port=8080, debug=debug)
+        server.run(host='0.0.0.0', port=9990, debug=debug)
     else:
-        serve(server, host='0.0.0.0', port=8080)
+        serve(server, host='0.0.0.0', port=9990)
