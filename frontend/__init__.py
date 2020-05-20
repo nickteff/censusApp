@@ -1,1 +1,1 @@
-from frontend import app1
+from frontend import app1, index
