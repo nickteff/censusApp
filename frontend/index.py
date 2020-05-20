@@ -13,7 +13,7 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.SUPERHERO],
     url_base_pathname='/')
 
-map_data = requests.get('http://0.0.0.0:9999/api/map/USA/both').json()
+map_data = requests.get('http://127.0.0.1:9999/api/map/USA/both').json()
 
 app.layout = dbc.Container(
     [
@@ -63,5 +63,5 @@ app.layout = dbc.Container(
     [Input(component_id='rural-id', component_property='value')]
 )
 def map_graph(input_value):
-    r = requests.get('http://0.0.0.0:9999/api/map/USA/{}'.format(input_value)).json()
+    r = requests.get('http://127.0.0.1:9999/api/map/USA/{}'.format(input_value)).json()
     return {'data': r['data'], 'layout': r['layout']}
