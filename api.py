@@ -2,10 +2,10 @@ from backend import api
 
 from waitress import serve
 
-debug = True
+debug = False
 
 if __name__ == '__main__':
     if debug:
         api.run(port=9999, debug=debug)
     else:
-        serve(api, port=9999, debug=debug)
+        serve(api, port=9999)
